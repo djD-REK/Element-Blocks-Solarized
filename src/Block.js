@@ -1,13 +1,16 @@
-import React from 'react';
-import { css, StyleSheet } from 'aphrodite/no-important';
-import { getStyles } from './getStyles';
-import { defaultConfig } from './configs';
 
-const Block = props => {
-    const classes = StyleSheet.create(getStyles(props));
-    return <h1 className={css(classes.example)}>{props.text}</h1>;
-};
+import React from "react"
+import { css, StyleSheet } from "aphrodite/no-important"
+import { getStyles } from "./getStyles"
+import { defaultConfig } from "./configs"
 
-Block.defaultProps = defaultConfig;
+const Block = (props) => {
+  const classes = StyleSheet.create(getStyles(props))
+  const { isDarkModeEnabled = false, text = "" } = props
+  const modeClass = isDarkModeEnabled ? css(classes.dark) : css(classes.light)
+  return <h1 className={modeClass}>{text}</h1>
+}
 
-export default Block;
+Block.defaultProps = defaultConfig
+
+export default Block
