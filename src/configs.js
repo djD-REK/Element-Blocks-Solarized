@@ -23,7 +23,7 @@ export const configSchema = {
 }
 
 export const defaultConfig = {
-  text: "Element Starter Block",
+  text: "Light or Dark",
   isDarkModeEnabled: true,
   darkModeHeader: "Dark Mode Hours",
   darkStart: 8,
