@@ -13,12 +13,7 @@ const Block = (props) => {
   const isDarkMode = isDarkModeEnabled && isDark
   const modeClass = isDarkMode ? css(classes.dark) : css(classes.light)
 
-  return (
-    <h1 className={modeClass}>
-      {isDarkMode}
-      {text}
-    </h1>
-  )
+  return <h1 className={modeClass}>{text}</h1>
 }
 
 Block.defaultProps = defaultConfig

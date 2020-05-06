@@ -1,7 +1,10 @@
 const tenantId = "$YOUR_TENANT_ID"
 
 const localEnvPropOverrides = {
-  text: "Custom prop value for local testing",
+  text: "Light or Dark Local Test",
+  isDarkModeEnabled: true,
+  darkStart: 4,
+  darkEnd: 6,
 }
 
 const dataUtils = {
@@ -140,11 +143,3 @@ window.onload = () =>
       }
     )
     .then(renderBlock)
-
-const props = {
-  ...blockModule.defaultConfig,
-  text: "Light or Dark",
-  isDarkModeEnabled: true,
-  darkStart: 8,
-  darkEnd: 6,
-}
