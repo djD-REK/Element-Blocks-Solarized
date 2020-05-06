@@ -145,6 +145,6 @@ const props = {
   ...blockModule.defaultConfig,
   text: "Light or Dark",
   isDarkModeEnabled: true,
-  darkStart: 5,
+  darkStart: 8,
   darkEnd: 6,
 }
